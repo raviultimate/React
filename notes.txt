@@ -1,0 +1,9 @@
+//Parcel benifits
+
+// Tree shaking - dead code removing 
+// Javascript minifier it minimizes the js file size. Parcel uses terser to do this job
+// image optimisation for svg parcel uses svgo
+// html optimizer
+// reduces bundle size
+// browser support configuration
+//caching -> everytime you save the file it takes less time to rebuild as it caches the previous build info

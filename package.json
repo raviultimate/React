@@ -1,0 +1,27 @@
+{
+  "name": "my-first-pkg",
+  "version": "1.0.0",
+  "description": "History begins",
+  "main": "App.js",
+  "scripts": {
+    "test": "npm run test",
+    "startop": "parcel index.html",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raviultimate/React.git"
+  },
+  "keywords": [
+    "creativeproject"
+  ],
+  "author": "Ravi Teja Manchikanti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raviultimate/React/issues"
+  },
+  "homepage": "https://github.com/raviultimate/React#readme",
+  "devDependencies": {
+    "parcel": "^2.8.2"
+  }
+}
