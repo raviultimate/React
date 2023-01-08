@@ -9,7 +9,15 @@
 //caching -> everytime you save the file it takes less time to rebuild as it caches the previous build info
 
 
+// Babel is a compiler which understands the JSX
 
+//Virtual DOM is just a representation of dom not real one React uses this
+
+//Reconciliation (diffing algorithm)-> It is algorithm to find out the different b/w dom trees to determine which parts need to be changed just like git diff .
+
+
+//Why Shouldn't we use array index as key (no-key < index key < unique key)
+// React Fiber
 1. Better Comments
 2. Bracket Pair Colorizer
 3. ES7+ React/Redux/
