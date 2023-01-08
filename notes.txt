@@ -9,7 +9,10 @@
 //caching -> everytime you save the file it takes less time to rebuild as it caches the previous build info
 
 
+
 // Babel is a compiler which understands the JSX
+
+//Discord ->> https://discord.com/channels/1057696352890519662/1060238868756037632
 
 //Virtual DOM is just a representation of dom not real one React uses this
 
