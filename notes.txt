@@ -9,6 +9,9 @@
 //caching -> everytime you save the file it takes less time to rebuild as it caches the previous build info
 
 
+//Discord ->> https://discord.com/channels/1057696352890519662/1060238868756037632
+
+
 
 1. Better Comments
 2. Bracket Pair Colorizer
