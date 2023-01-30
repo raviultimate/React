@@ -3,27 +3,27 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/img/foodVilla.jpg";
 export const Title = () => (
   <h1 id="title" key="h2">
-    <img className="logo" alt="logo" src={logo} />
+    <img className="h-[70] m-2" alt="logo" src={logo} />
   </h1>
 );
 
 const HeaderComponent = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
-    <div className="header">
+    <div className="flex justify-between bg-lime-800">
       <Title />
-      <div className="nav-items">
-        <ul>
-          <li>
+      <div>
+        <ul className="flex">
+          <li className="m-4 text-white">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="m-4 text-white">
             <Link to="/about">About us</Link>
           </li>
-          <li>
+          <li className="m-4 text-white">
             <Link to="/contact">Contact</Link>
           </li>
-          <li>Cart</li>
+          <li className="m-4 text-white">Cart</li>
         </ul>
       </div>
 
@@ -32,6 +32,7 @@ const HeaderComponent = () => {
           onClick={() => {
             setIsLoggedIn(true);
           }}
+          className="bg-yellow-500 p-4 rounded-sm m-3"
         >
           Login
         </button>
@@ -40,6 +41,7 @@ const HeaderComponent = () => {
           onClick={() => {
             setIsLoggedIn(false);
           }}
+          className="bg-yellow-500 p-4 rounded-sm m-3"
         >
           Logout
         </button>

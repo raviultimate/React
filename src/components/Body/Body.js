@@ -3,19 +3,15 @@ import { restaurantList } from "../../constants";
 import { useEffect, useState } from "react";
 import { CardShimmer } from "../UI/shimmer";
 import { Link } from "react-router-dom";
-
-const searchFilter = (searchTxt, items) => {
-  const filteredData = items.filter((element) =>
-    element.data.name.toLowerCase().includes(searchTxt.toLowerCase())
-  );
-  return filteredData;
-};
+import { searchFilter } from "../../utils/helper";
+import useOnline from "../../utils/useOnline";
 
 const Body = () => {
   const [searchTxt, setSearchTxt] = useState("");
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
-  const [restaurants, setRestaurants] = useState(restaurantList);
+
+  const isOnline = useOnline();
 
   useEffect(() => {
     getRestaurants();
@@ -30,12 +26,16 @@ const Body = () => {
     setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   }
 
+  if (!isOnline) {
+    return <h1>You are offline</h1>;
+  }
+
   return (
     <>
-      <div className="search-container">
+      <div className="bg-slate-500">
         <input
           type="text"
-          className="search-input"
+          className="m-4 p-1 rounded-md border-solid border-2 border-yellow-900 hover:border-dashed focus:bg-slate-300"
           placeholder="search"
           value={searchTxt}
           onChange={(e) => {
@@ -43,7 +43,7 @@ const Body = () => {
           }}
         />
         <button
-          className="search-btn"
+          className="bg-yellow-500 p-1 px-2 rounded-md"
           onClick={(e) => {
             const data = searchFilter(searchTxt, allRestaurants);
             setFilteredRestaurants(data);
@@ -55,7 +55,7 @@ const Body = () => {
       {allRestaurants.length == 0 ? (
         <CardShimmer />
       ) : (
-        <div className="restaurant-list">
+        <div className="flex flex-wrap bg-lime-50 items-stretch">
           {filteredRestaurants.length == 0 ? (
             <h1>No match found try with something else:)</h1>
           ) : (
