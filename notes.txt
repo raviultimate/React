@@ -25,6 +25,32 @@
 
 
 
+//css types
+Normal native css
+scss
+inline css
+css libraries or component libraries below are few libraries [//Matrial UI
+//BaseUI
+CHARA UI
+ANT UI..]
+styled components (css in js just like html in js[JSX])
+Tailwind css framework
+
+Tailwind intellisense plugin
+if suggestions wont show press ctrl+space
+if exact sizes not available use square brackets
+
+Benifits of tailwind
+easy to use
+easy to debug
+reduces the development efforts
+
+cons:
+too many classes to remember
+learning curve
+
+
+
 // React Fiber
 1. Better Comments
 2. Bracket Pair Colorizer
