@@ -36,6 +36,9 @@ ANT UI..]
 styled components (css in js just like html in js[JSX])
 Tailwind css framework
 
+
+Tailwind components :- https://tailwindcomponents.com/component/dashboard-sidebar-navigation
+
 Tailwind intellisense plugin
 if suggestions wont show press ctrl+space
 if exact sizes not available use square brackets

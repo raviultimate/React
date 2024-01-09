@@ -50,7 +50,9 @@ const approutes = createBrowserRouter([
       },
       {
         path: "/restaurant/:resId",
-        element: <RestaurantMenu />,
+        element: (<Suspense fallback={<h1>loading..</h1>}>
+        <RestaurantMenu />
+      </Suspense>),
       },
     ],
   },
